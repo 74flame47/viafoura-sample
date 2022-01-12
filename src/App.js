@@ -134,7 +134,7 @@ const addWorks = async (works) => {
           </div>
           <input type="text" placeholder="Search for authors" name="search_bar" id="search_bar" onChange={addAuthor}/>
           <button onClick={submitSearch}>submit</button>
-          <img className="logo_searchBar" src={LogoSample} alt="logo sample" />
+          {/* <img className="logo_searchBar" src={LogoSample} alt="logo sample" /> */}
         </div>
         
       </div>

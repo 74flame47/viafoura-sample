@@ -83,7 +83,7 @@ const AuthorBookTile = ({title,cover,authors,created,description,subjects}) => {
         await setTileActive(!tileActive)
     }
 
-    return(<div onClick={tileToggle} style={{overflow:"hidden"}}>
+    return(<div onClick={tileToggle} style={{overflow:"hidden", height:"100%"}}>
                 <div style={tileActive? inactive: active}>
 
 
