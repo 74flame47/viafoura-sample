@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+#search_container {
+  width: 100vw;
+  height: 18vh;
+  background-color: #6a0b82;
+  position:absolute;
+  bottom: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#search_container input{
+  width: 80%;
+  padding: 5px;
+  margin: 0 auto;
+  display: inline-block;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 3px 0px 0px 3px ;
+  font-size: 1.3em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+#search_container button{
+  width: 20%;
+  display: inline-block;
+  padding: 5px;
+  background-color: #171717;
+  color: #ffffff;
+  border: none;
+  border-radius: 0px 3px 3px 0px;
+  font-size: 1.3em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+
+
+
+
+
+#search_bar_filter_container{
+  height: 50px;
+  width: 99%;
+  padding: 2.3vh 0 0 0;
+  margin: 0 auto;
+  font-size: .8em;
+  /* border: 1px solid #cccccc; */
 }
 
-.App-link {
-  color: #61dafb;
+.filter_item{
+  display: inline-block;
+  padding: 2px 15px;
+  min-width: 10px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  border: 1px solid #ab27b1;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter_close_btn{
+  display: inline-block;
+  padding: 0px 5px;
+  min-width: 1px;
+  border-radius: 100px;
+  color:#cf2828;
+  background-color: #ffffff;
+  border: 2px solid #cf2828;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-weight: 900;
 }
+
+.filter_close_btn:hover{
+  color:#ffffff;
+  background-color: #cf2828;
+  cursor: pointer;
+}
+
+.search_inner_container{
+  max-width: 700px;
+  
+  width:91%;
+  margin: 0 auto;
+  min-height: 100px;
+  /* border: 1px solid #cccccc; */
+}
+
+
+
+
+
+
+
+#search_container button:hover{
+
+  background-color: #ab27b1;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+
+.logo_searchBar{
+  position: fixed;
+  left: 3vw;
+  bottom: 3%;
+  width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

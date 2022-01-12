@@ -1,0 +1,16 @@
+.name_tile{
+    border: 4px solid #cccccc23;
+    padding: 10px 10px;
+    font-size:1.2em;
+    margin: 5px;
+    color: #ffffff;
+}
+
+
+.name_tile:hover{
+    /* border: none; */
+    background-color: #6a0b82;
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.1);
+}
