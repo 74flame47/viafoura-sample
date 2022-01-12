@@ -21,12 +21,23 @@ import LogoSample from "./imgs/logo-sample.png";
 
 
 const App = () => {
-
+//I used this to determine if the component is loading the data
   const [submitting, setSubmitting] = useState(false);
 
+
+//This is the value that will be used in the query for authors
   const [searchValue, setSearchValue] = useState(null);
+
+
+//This is used to dynamicly render the different components {author list | author work}
   const [currentAuthor, setCurrentAuthor] = useState(false);
+
+
+//This will store the author list data after the fetch
   const [authorList, setAuthorList] = useState(null);
+
+
+//This will store the author work list data after the fetch
   const [authorWorkList, setAuthorWorkList] = useState(null);
 
 
@@ -39,7 +50,7 @@ const App = () => {
 
 
 
-  
+  //This is the function to submit the input values
   const submitSearch = async () => {
 
     //This code is used to create the loading gif
@@ -75,13 +86,12 @@ const App = () => {
  }
 
 
-
-
+//This function saves the author's work list results to the state in the App.js component
 const addWorks = async (works) => {
   await setAuthorWorkList(works)
 }
 
-
+//This function saves the input value to the state
  const addAuthor = async (event) => {
   let currentValue = event.target.value
 
@@ -91,6 +101,8 @@ const addWorks = async (works) => {
 
  }
 
+
+ //This function resets the values in the state so that the search results are cleared
  const resetFilter = async() =>{
   await setSearchValue(null);
   await setCurrentAuthor(false);
@@ -98,7 +110,7 @@ const addWorks = async (works) => {
   await setAuthorWorkList(null)
  }
 
-
+//This function add the input value above the search bar
  const addFilter =  (value) => {
 
     if(value == null || value.length < 1){
@@ -118,10 +130,9 @@ const addWorks = async (works) => {
 
   return (
     <div className="app_container">
-{/* <button onClick={ () =>{console.log(currentAuthor)}} style={{position:"fixed",right:"50vw",top:"10vh"}}>Check currentAuthor in App</button> */}
       <div id="results_container">
               {currentAuthor? <AuthorWorkComp authorWorkList={authorWorkList}
-                                              currentAuthor={currentAuthor}/> : <AuthorListComp  authorList={authorList}
+                                              /> : <AuthorListComp  authorList={authorList}
                                                                                   setCurrentAuthor={setCurrentAuthor}
                                                                                   addWorks={addWorks}
                                                                                   submitting={submitting}/>}

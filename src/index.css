@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppins Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url('./fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+
 *{
   box-sizing: border-box;
   transition: .5s;
