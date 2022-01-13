@@ -14,7 +14,7 @@ import LogoSample from "../imgs/logo-sample.png";
 
 
 
-const AuthorListComp = ({authorList,setCurrentAuthor,addWorks,submitting}) => {
+const AuthorListComp = ({authorList,setCurrentAuthor,addWorks,submitting,getCurrentAuthorData}) => {
 
     // This sets the current author to true which will I can use to render the author work list
     const currentAutherHolder = () => {
@@ -29,7 +29,11 @@ const AuthorListComp = ({authorList,setCurrentAuthor,addWorks,submitting}) => {
             <div className="authorsList_inner2_container">
                 {authorList !== null ? authorList.docs.map((element , i) => {
                      
-                    return (<div onClick={currentAutherHolder} key={i}><AuthorTileComp  authorname={element.name} authorId={element.key} addWorks={addWorks}/></div>)
+                    return (<div onClick={currentAutherHolder} key={i}><AuthorTileComp  authorname={element.name} 
+                                                                                        authorId={element.key}
+                                                                                        addWorks={addWorks}
+                                                                                        authorData={element}
+                                                                                        getCurrentAuthorData={getCurrentAuthorData}/></div>)
                 }): null}
                 {submitting?<img id="logo_loader" src={LogoSample} alt="logo sample"/>:null}
             </div>

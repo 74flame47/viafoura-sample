@@ -11,14 +11,20 @@ import LogoSample from "../imgs/logo-sample.png";
 
 
 
-const AuthorWorkComp = ({authorWorkList}) => {
+const AuthorWorkComp = ({authorWorkList,currentAuthorData}) => {
 
     
+    const shortenName = () =>{
+        let name = currentAuthorData.name
+        if(name.length ){
+
+        }
+    }
 
 
 
     return(<div id="authorWork_container">
-                <h1>Author Place holder</h1>
+                <h1>{currentAuthorData.name}</h1>
                 <div className="tiles_book_container">
                     {/* THis is the loader for the worklist */}
                     {authorWorkList == null ?<img id="logo_loader" src={LogoSample} alt="logo sample"/>:null}
@@ -97,4 +103,4 @@ const AuthorWorkComp = ({authorWorkList}) => {
 
 
 export default AuthorWorkComp;
-// {/* <button onClick={ () =>{console.log(tileData)}} style={{position:"fixed",right:"50vw",top:"10vh"}}>Check tile data in booktile</button> */}
+

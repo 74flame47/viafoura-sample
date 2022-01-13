@@ -100,8 +100,8 @@ const [coverImg, setCoverImg] = useState(null);
 
                     <p className="bootTile_created">Created: {tileData.created == null? "_/_/_":createdTime.toDateString()}</p>
                     <h2 className="bootTile_title">{tileData.title}</h2>
-                    <p className="bootTile_addition">Edition:{tileData.edition  == null? "unavailable": tileData.edition}</p>
-                    <p className="bootTile_published">Published:{tileData.published  == null? "unavailable": tileData.published}</p>
+                    <p className="bootTile_addition">Edition: {tileData.edition  == null? "unavailable": tileData.edition}</p>
+                    <p className="bootTile_published">Published: {tileData.published  == null? "unavailable": tileData.published}</p>
                     <p  className="bootTile_authors">Authors: </p>
                     <p  className="bootTile_description_header">Description:</p>
                     <p className="bootTile_description">{tileData.description == null? "There is no description at this time.":tileData.description.value}</p>

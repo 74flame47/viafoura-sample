@@ -19,8 +19,10 @@
 }
 
 .tiles_book_container{
-    width: auto;
+    width: 100vw;
+    max-width: 1250px;
     height: 74vh;
+    margin: 0 auto;
     overflow-y:scroll ;
     justify-content: center; 
     grid-template-columns: 60px 60px;
@@ -38,7 +40,7 @@
     margin: 15px;
      float: left;
      box-shadow: 2px 2px 5px  #000000c4;
-     background-color: #6a0b82;
+     background-color: #0f0f0f;
      color: #ffffff;
      position: relative;
      padding: 0;

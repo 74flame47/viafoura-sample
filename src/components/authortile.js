@@ -5,7 +5,7 @@ import '../css/authorTile.css';
 
 
 
-const AuthorTileComp = ({authorname,authorId,addWorks}) => {
+const AuthorTileComp = ({authorname,authorId,addWorks,authorData,getCurrentAuthorData}) => {
 
     const getWorks = async () => {
         // console.log(authorname)
@@ -16,6 +16,8 @@ const AuthorTileComp = ({authorname,authorId,addWorks}) => {
 
         await addWorks(searchWorksResults);
         // await console.log(searchWorksResults);
+
+        await getCurrentAuthorData(authorData)
     }
 
 

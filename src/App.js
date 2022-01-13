@@ -31,6 +31,7 @@ const App = () => {
 
 //This is used to dynamicly render the different components {author list | author work}
   const [currentAuthor, setCurrentAuthor] = useState(false);
+  const [currentAuthorData, setCurrentAuthorData] = useState({});
 
 
 //This will store the author list data after the fetch
@@ -122,6 +123,10 @@ const addWorks = async (works) => {
 
  }
 
+ const getCurrentAuthorData = async(authorData) =>{
+  await setCurrentAuthorData(authorData)
+ }
+
 
  //This function resets the values in the state so that the search results are cleared
  const resetFilter = async() =>{
@@ -153,15 +158,18 @@ const addWorks = async (works) => {
     <div className="app_container">
       <div id="results_container">
               {currentAuthor? <AuthorWorkComp authorWorkList={authorWorkList}
+                                              currentAuthorData={currentAuthorData}
                                               /> : <AuthorListComp  authorList={authorList}
-                                                                                  setCurrentAuthor={setCurrentAuthor}
-                                                                                  addWorks={addWorks}
-                                                                                  submitting={submitting}/>}
+                                                                    setCurrentAuthor={setCurrentAuthor}
+                                                                    addWorks={addWorks}
+                                                                    getCurrentAuthorData={getCurrentAuthorData}
+                                                                    submitting={submitting}/>}
       </div>
 
       <div id="search_container">
         <div className="search_inner_container">
           <div id="search_bar_filter_container">
+            <span style={{color:"#ffffff"}}>clear search:    </span>
             {addFilter(searchValue)}
           </div>
           <input type="text"
@@ -178,7 +186,7 @@ const addWorks = async (works) => {
       </div>
 
       
-
+      {/* <button onClick={ () =>{console.log(currentAuthorData)}} style={{position:"fixed",right:"50vw",top:"10vh"}}>Check tile data in booktile</button>  */}
     </div>
   );
 }
