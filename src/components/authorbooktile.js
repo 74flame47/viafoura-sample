@@ -105,8 +105,8 @@ const [coverImg, setCoverImg] = useState(null);
                     <p  className="bootTile_authors">Authors: </p>
                     <p  className="bootTile_description_header">Description:</p>
                     <p className="bootTile_description">{tileData.description == null? "There is no description at this time.":tileData.description.value}</p>
-                    <div style={{position:"absolute",bottom:"0",width:"100%",height:"110px",overflowY:"scroll"}}>
-                        <p className="bootTile_subject">Subject: {tileData.subjects == null? <span>unavailable</span>: tileData.subjects.map((sub,i) =>{
+                    <div  className="bootTile_subject" >
+                        <p>Subject: {tileData.subjects == null? <span>unavailable</span>: tileData.subjects.map((sub,i) =>{
                             return <span key={i} className="book_subject">{sub}</span>
                             })}</p>
                     </div>
@@ -120,7 +120,7 @@ const [coverImg, setCoverImg] = useState(null);
                 <img src={LogoSample} alt="logo sample" style={tileActive? {opacity:'0'}: {opacity:'1'}} className="tile_logo_noIMG"/>
             </div> : null}                                                            
                 
-                {console.log(tileData)}
+                
             </div>)
 }
 

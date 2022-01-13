@@ -1,3 +1,47 @@
+
+.bootTile_subject {
+    position: absolute;
+    bottom: 0;
+    width: 97%;
+    left: 0;
+    margin: 0;
+    padding:0 0px 0 5px;
+    height: 110px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+  }
+
+
+/* style={{position:"absolute",
+    bottom:"0",
+    margin:" 0 10px 0 0",
+    padding: " 0 10px 0 5px",
+    height:"110px",
+    overflowY:"scroll",
+    left:"0"}} */
+
+
+
+.bootTile_subject::-webkit-scrollbar {
+    width: 7px;
+  }
+
+
+
+.bootTile_subject::-webkit-scrollbar-track {
+    background: #313131; 
+  }
+
+
+
+
+  .bootTile_subject::-webkit-scrollbar-thumb {
+    background: rgb(85, 85, 85); 
+  }
+
+
+
+
 .book_subject{
     margin: 3px;
     padding: 3px 5px;
@@ -5,6 +49,7 @@
     color:#ab27b1;
     background-color: #ffffff;
     border-radius: 3px;
+    display: inline-block;
 }
 
 
@@ -35,12 +80,35 @@
 }
 .bootTile_description{
     margin: 0;
-    max-height: 225px;
+    max-height: 197px;
     overflow-y: scroll;
+    overflow-x: hidden;
     padding: 0 10px;
     font-size: .9em;
     /* border: 1px solid #cccccc; */
 }
+
+
+
+
+.bootTile_description::-webkit-scrollbar {
+    width: 7px;
+  }
+
+
+
+  .bootTile_description::-webkit-scrollbar-track {
+    background: #313131; 
+  }
+   
+  /* Handle */
+  .bootTile_description::-webkit-scrollbar-thumb {
+    background: rgb(85, 85, 85); 
+  }
+
+
+
+
 
 .title_noIMG{
     top:300px;
@@ -54,6 +122,5 @@
     inset: 0rem;
     position:absolute
 };
-
 
 

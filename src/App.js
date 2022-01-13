@@ -26,7 +26,7 @@ const App = () => {
 
 
 //This is the value that will be used in the query for authors
-  const [searchValue, setSearchValue] = useState(null);
+  const [searchValue, setSearchValue] = useState("");
 
 
 //This is used to dynamicly render the different components {author list | author work}
@@ -85,6 +85,20 @@ const App = () => {
 
  }
 
+//This is the function to submit the input values with the enter key
+const enterBtnSubmit = (event) => {
+  let enterKey = event.charCode
+  if(enterKey == 13){
+    submitSearch()
+  }
+  console.log(enterKey)
+}
+
+
+
+
+
+
 
 //This function saves the author's work list results to the state in the App.js component
 const addWorks = async (works) => {
@@ -95,6 +109,13 @@ const addWorks = async (works) => {
  const addAuthor = async (event) => {
   let currentValue = event.target.value
 
+
+
+    // if (event.keyCode === 13) {
+    //   console.log("Enter key is pressed");
+    //   return true;
+    // }
+
   await setSearchValue(currentValue)
 
   console.log(currentValue)
@@ -104,7 +125,7 @@ const addWorks = async (works) => {
 
  //This function resets the values in the state so that the search results are cleared
  const resetFilter = async() =>{
-  await setSearchValue(null);
+  await setSearchValue("");
   await setCurrentAuthor(false);
   await setAuthorList(null)
   await setAuthorWorkList(null)
@@ -143,7 +164,13 @@ const addWorks = async (works) => {
           <div id="search_bar_filter_container">
             {addFilter(searchValue)}
           </div>
-          <input type="text" placeholder="Search for authors" name="search_bar" id="search_bar" onChange={addAuthor}/>
+          <input type="text"
+                 placeholder="Search for authors"
+                 name="search_bar" 
+                 id="search_bar"
+                 value={searchValue} 
+                 onChange={addAuthor}
+                 onKeyPress={enterBtnSubmit}/>
           <button onClick={submitSearch}>submit</button>
           {/* <img className="logo_searchBar" src={LogoSample} alt="logo sample" /> */}
         </div>
