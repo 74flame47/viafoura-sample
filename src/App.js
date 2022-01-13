@@ -75,7 +75,7 @@ const App = () => {
 
       await setAuthorList(searchResults);
 
-      await console.log("We have an author")
+      // await console.log("We have an author")
       
     }
 
@@ -92,7 +92,7 @@ const enterBtnSubmit = (event) => {
   if(enterKey == 13){
     submitSearch()
   }
-  console.log(enterKey)
+  // console.log(enterKey)
 }
 
 
@@ -110,16 +110,9 @@ const addWorks = async (works) => {
  const addAuthor = async (event) => {
   let currentValue = event.target.value
 
-
-
-    // if (event.keyCode === 13) {
-    //   console.log("Enter key is pressed");
-    //   return true;
-    // }
-
   await setSearchValue(currentValue)
 
-  console.log(currentValue)
+  // console.log(currentValue)
 
  }
 

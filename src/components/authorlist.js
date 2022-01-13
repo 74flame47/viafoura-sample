@@ -34,8 +34,13 @@ const AuthorListComp = ({authorList,setCurrentAuthor,addWorks,submitting,getCurr
                                                                                         addWorks={addWorks}
                                                                                         authorData={element}
                                                                                         getCurrentAuthorData={getCurrentAuthorData}/></div>)
-                }): null}
-                {submitting?<img id="logo_loader" src={LogoSample} alt="logo sample"/>:null}
+                }): <img style={{margin:'auto',
+                                width:'200px',
+                                inset: '0rem',
+                                top: "50vh",
+                                position:"absolute"
+                                }} src={LogoSample} alt="logo sample"/>}
+                {/* {submitting?<img id="logo_loader" src={LogoSample} alt="logo sample"/>:null} */}
             </div>
             
             
