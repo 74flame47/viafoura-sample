@@ -1,4 +1,3 @@
-import React, {useState} from "react";
 //Components
 import AuthorBookTile from "./authorbooktile";
 //Css
@@ -13,13 +12,6 @@ import LogoSample from "../imgs/logo-sample.png";
 
 const AuthorWorkComp = ({authorWorkList,currentAuthorData}) => {
 
-    
-    const shortenName = () =>{
-        let name = currentAuthorData.name
-        if(name.length ){
-
-        }
-    }
 
 
 

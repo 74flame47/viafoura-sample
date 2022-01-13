@@ -9,7 +9,7 @@ import './App.css';
 
 
 //Images
-import LogoSample from "./imgs/logo-sample.png";
+// import LogoSample from "./imgs/logo-sample.png";
 
 
 
